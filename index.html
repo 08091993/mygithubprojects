@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>assignment</title>
+	<link rel="stylesheet" href="style.css">
+	<script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+	<script src="assignment.js"></script>
+</head>
+
+<body ng-app="my_App">
+	<div ng-controller="myCntrl">
+
+		<table align = "center" text-align= "center"  style="border-collapse:collapse" border="2" height= 200px width = 200px>
+		<tr > 
+		<th>Name</th>
+		<th>Age</th>
+		<th>Location</th>
+		<th>Details</th>
+		
+		</tr>
+
+		<tr ng-repeat="value in datagiven | filter:custom_filter">
+		<td align="center">{{value.name}}</td>
+		<td align="center">{{value.age}}</td>
+		<td align="center">{{value.location}}</td>
+		<td align="center"><input type="button"  id="btn" name="detail_button" value="Details"  ng-click="display_details(value)" ng-dblclick="hide()"/></td>
+		</tr>
+
+		<tr>
+		<td align="center" ><input tye="text" ng-model="custom_filter.name" placeholder="Filter By Name" /></td>
+		<td align="center" > <input tye="text" ng-model="custom_filter.age" placeholder="Filter By Age" /></td>
+		<td align="center" > <input tye="text" ng-model="custom_filter.location" placeholder="Filter By Location" /></td>
+		<td align="center"><input type="text" ng-model="custom_filter.$" placeholder="Globalized Filter" /></td>
+		</tr>
+
+
+		</table>
+	
+
+		<div id="seconddiv" align="center" ng-show="reverse">
+    <br/>
+    <br/>
+    <b> Details </b>
+    	<table align = "center"   style="border-collapse:collapse" border="2" height= 200px width = 250px>
+		  
+		      
+                 <tr>
+                     <td align="center"><b>Name</b></td>
+                     <td align="center">{{name}}</td>
+                 </tr>
+                 <tr>
+                     <td align="center"><b>Age</b></td>
+                     <td align="center">{{age}}</td>
+                 </tr>
+                 <tr>
+                     <td align="center"><b>Location</b></td>
+                     <td align="center">{{location}}</td>
+                 </tr>
+                 <tr>
+                     <td align="center"><b>Email</b></td>
+                     <td align="center">{{email}}</td>
+                 </tr>
+                 
+                 <tr>
+                     <td align="center"><b>Phone</b></td>
+                     <td align="center"><span ng-repeat="number in phone track by $index">
+                     {{" ["+number+"] "}}
+             </span> </td>
+                     
+                 </tr>
+                 
+      </table>
+             
+	   
+	
+
+ </div>
+	</div>
+
+</body>
+
+</html>

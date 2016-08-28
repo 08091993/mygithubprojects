@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Arun",
+        "location":"India",
+        "email":"arun.gopan@marlabs.com",
+        "age":"30",
+        "phone":["234324","234324","32432423","5345","436546455654","675435345"]
+    },
+    {
+        "name":"Nanda",
+        "location":"US",
+        "email":"nanda@marlabs.com",
+        "age":"25",
+        "phone":["234324","234324","32432423","5345","436546455654","675435345"]
+    },
+    {
+        "name":"Naveen",
+        "location":"Canada",
+        "email":"naveen@marlabs.com",
+        "age":"20",
+        "phone":["234324","234324","32432423","5345","436546455654","675435345"]
+    },
+    {
+        "name":"Jacob",
+        "location":"Australia",
+        "email":"jacob@marlabs.com",
+        "age":"35",
+        "phone":["234324","234324","32432423","5345","436546455654","675435345"]
+    }
+]
